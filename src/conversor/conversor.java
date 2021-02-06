@@ -18,22 +18,25 @@ public class conversor {
    public  void dec_bin(int num) {
 
         this.num = num;
-        
+        String valor= "";
+        int v;
         while (num != 0) {
             
             if (num % 2 == 0) {
 
-                System.out.print("0 ");
+                //System.out.print("0 ");
+                v= 0;
                  
             } else {
 
-                System.out.print("1 ");
+                //System.out.print("1 ");
+                v= 1;
                 
             }
-            
+            valor= valor + v;
             num = Math.round(num / 2);
         }
-        
+       System.out.println(new StringBuilder(valor).reverse().toString()); 
     }
 
     
